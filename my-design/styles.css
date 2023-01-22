@@ -1,10 +1,19 @@
+div{
+    box-sizing: border-box;
+   margin: 0;
+}
+
+
 .card-container{
+    padding-top: 50px;
     background-color: rgb(11, 2, 19);
     height: 100vh;
+    width: 100vw;
     display:flex;
     align-items: center;
     justify-content:center;
-    flex-direction:row;
+    flex-direction:column;
+    
     
 }
 
@@ -12,15 +21,15 @@
 .card{
    
 
-    width:30%;
-    height:60%;
-    display:inline-flex;
-    flex-direction: row;
+    width:140%;
+    height:75%;
+    display:flex;
+    flex-direction: column;
 }
 
 .card>div{
-height: 100%;
-width: 50%; 
+height:100%;
+width:54%; 
   
 }
 
@@ -29,6 +38,7 @@ width: 50%;
 
 border:3px hidden;
 border-radius: 5px 0px 0px 5px;
+
 }
 
 
@@ -41,12 +51,14 @@ color:rgb(85, 83, 83);
 display: flex;
 flex-direction: column;
 justify-content: space-around;
-padding-left:10px;
+padding-left:5px;
 padding-top:1px ;
+
 }
 
-.product-img>img{
-    height: 100%;
+.product-img > picture >img{
+    width: 100%;
+    
 }
 
 .add-btn{
@@ -55,6 +67,9 @@ padding-top:1px ;
     background-color: rgb(12, 139, 31);
     border-radius: 10px;
     height:45px;
+    width: 150px;
+    align-self: center;
+    justify-self:center;
 }
 
 .prices{
@@ -77,6 +92,61 @@ padding-top:1px ;
     padding-top:5px ;
 }
 
-@media all {
+
+
+
+
+@media screen and (min-width:250px){
+
+    .card-container{
+
+        padding-left:120px;
+        padding-bottom: 200px;
+    } 
+
+
+    .card{
+   
+
+        width:140%;
+        height:60%;
+        display:flex;
+        flex-direction: column;
+    }
     
+}
+
+
+/*desktop and larger devices*/
+@media screen and (min-width:720px){
+
+    
+    
+    .card{
+   
+
+        width:61.25%;
+        height:50%;
+        display:flex;
+        flex-direction: row;
+    }
+    
+    .product-description{
+        padding-left: 15px;
+        padding-right: 20px;
+        justify-content: space-around;
+    }
+
+
+.card>div{
+    height: 120%;
+    width: 45%; 
+      
+    }
+    
+.add-btn{
+    width: 150px;
+}
+
+
 }
