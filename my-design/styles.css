@@ -1,152 +1,176 @@
+/*for mobile devices (portrait)*/
+
+
 div{
-    box-sizing: border-box;
+   box-sizing: border-box;
    margin: 0;
+   padding: 0;
 }
 
 
 .card-container{
-    padding-top: 50px;
-    background-color: rgb(11, 2, 19);
-    height: 100vh;
-    width: 100vw;
-    display:flex;
-    align-items: center;
-    justify-content:center;
-    flex-direction:column;
-    
-    
+   display:flex;
+   flex-direction: column;
+   height: 100vh;
+   align-items: center;
+   justify-content: center;
+   background-color: hsl(30, 38%, 92%);
+   padding: 50px;
+   
+   
 }
-
 
 .card{
-   
-
-    width:140%;
-    height:75%;
-    display:flex;
-    flex-direction: column;
-}
-
-.card>div{
-height:100%;
-width:54%; 
-  
-}
-
-
-.product-img{
-
-border:3px hidden;
-border-radius: 5px 0px 0px 5px;
-
-}
-
-
-.product-description{
-background-color: rgb(248, 241, 248);
-border:3px hidden;
-border-radius: 0px 5px 5px 0px;
-font-size: 12px;
-color:rgb(85, 83, 83);
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-padding-left:5px;
-padding-top:1px ;
-
-}
-
-.product-img > picture >img{
-    width: 100%;
-    
-}
-
-.add-btn{
-    color: white;
-    font-weight: bold;
-    background-color: rgb(12, 139, 31);
-    border-radius: 10px;
-    height:45px;
-    width: 150px;
-    align-self: center;
-    justify-self:center;
-}
-
-.prices{
     display: flex;
-    padding-left: 15px;
-    padding-top: 10px;
-    padding-bottom:10px ;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+
+} 
+
+.product-img-container{
+    
+    width: 95%;
+    height: 25%;
+   
+}
+
+
+.product-description-container{
+    background-color:  hsl(0, 0%, 100%);
+    width:95%;
+    height:75%;
+    border: 4px hidden;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    padding:5px ;
+    
+ 
 }
 
-.discount-price{
-    color: green;
-    font-size: 20px;
-    font-weight: bolder;
-    font-family: 'Franklin Gothic Medium';
-}
-
-.original-price{
-    text-decoration-line: line-through;
-    padding-top:5px ;
-}
-
-
-
-
-
-@media screen and (min-width:250px){
-
-    .card-container{
-
-        padding-left:120px;
-        padding-bottom: 200px;
-    } 
-
-
-    .card{
+.picture-container>img{
+    width:100%;
+    height:100%;
+    border: 4px hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
    
-
-        width:140%;
-        height:60%;
-        display:flex;
-        flex-direction: column;
-    }
-    
 }
 
-
-/*desktop and larger devices*/
-@media screen and (min-width:720px){
-
-    
-    
-    .card{
-   
-
-        width:61.25%;
-        height:50%;
-        display:flex;
-        flex-direction: row;
-    }
-    
-    .product-description{
-        padding-left: 15px;
-        padding-right: 20px;
-        justify-content: space-around;
-    }
-
-
-.card>div{
-    height: 120%;
-    width: 45%; 
-      
-    }
-    
 .add-btn{
     width: 150px;
+    height: 30px;
+    background-color: rgba(87, 179, 87, 0.877);
+    align-self: center;
+    border: 2px ;
+    border-radius: 10px;
+
+   
 }
+
+
+#product-description-text{
+    color:rgb(105, 103, 103);
+    padding-bottom:20px ;
+    padding-left:20px ;
+}
+
+.perfume-text{
+    letter-spacing: 5px;
+    color:rgb(105, 103, 103)
+}
+
+#prices{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+#prices>#original{
+    text-decoration: line-through;
+    padding-top: 10px;
+}
+
+#prices>#discount{
+   font-size: 30px;
+    font-weight: 700;
+    color: rgb(15, 158, 34);
+}
+
+
+@media screen and (min-width:500px) {
+
+    .card{
+       flex-direction:row;
+       height:70%;
+       width:100%;
+    }
+    
+   
+    .product-img-container{
+   
+       width: 80%;
+       height: 100%;
+      
+       
+   }
+
+   .product-description-container{
+       width: 100%;
+       height:100%;
+       border-top-right-radius: 15px;
+   }
+
+
+   .picture-container>img{
+       
+       border-bottom-left-radius: 15px;
+       border-top-right-radius: 0;
+      
+   }
+
+}
+
+
+
+
+
+/*desktop*/
+@media screen and (min-width:720px) and (orientation:landscape) {
+
+     .card{
+        flex-direction:row;
+        height:100%;
+        width:100%;
+     }
+     
+    
+     .product-img-container{
+    
+        width: 100%;
+        height:100%;
+       
+        
+    }
+
+    .product-description-container{
+        width: 100%;
+        height:100%;
+        border-top-right-radius: 15px;
+    }
+
+
+    .picture-container>img{
+        
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 0;
+       
+    }
+
 
 
 }
